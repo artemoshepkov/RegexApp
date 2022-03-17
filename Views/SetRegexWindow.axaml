@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="100"
+        x:Class="RegexApp.Views.SetRegexWindow"
+        Title="SetRegexWindow"
+        Width="400"
+        Height="100">
+
+  <Window.Styles>
+    <Style Selector="Button.AppButtons">
+      <Setter Property="FontSize" Value="17"/>
+      <Setter Property="Background" Value="LightSkyBlue"/>
+      <Setter Property="HorizontalAlignment" Value="Stretch"/>
+      <Setter Property="VerticalAlignment" Value="Stretch"/>
+      <Setter Property="HorizontalContentAlignment" Value="Center"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+  </Window.Styles>
+
+  <Grid RowDefinitions="*,*,*">
+
+    <TextBox Name="regularExpressionTextBox" Text="{Binding RegularExpression}" Grid.Row="0"/>
+
+    <Button Name="okButton" Content="OK" Grid.Row="1" Classes="AppButtons"/>
+
+    <Button Name="cancelButton" Content="Cancel" Grid.Row="2" Classes="AppButtons"/>
+    
+  </Grid>
+  
+</Window>

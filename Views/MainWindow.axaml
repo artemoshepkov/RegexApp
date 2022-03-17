@@ -1,0 +1,45 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RegexApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="400"
+        x:Class="RegexApp.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="RegexApp"
+        Width="400"
+        Height="400">
+
+  <Window.Styles>
+    <Style Selector="Button.AppButtons">
+      <Setter Property="FontSize" Value="20"/>
+      <Setter Property="Background" Value="LightSkyBlue"/>
+      <Setter Property="HorizontalAlignment" Value="Stretch"/>
+      <Setter Property="VerticalAlignment" Value="Stretch"/>
+      <Setter Property="HorizontalContentAlignment" Value="Center"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+  </Window.Styles>
+    
+   <Window.Styles>
+    <Style Selector="TextBox.GeneralPropertiesText">
+      <Setter Property="AcceptsReturn" Value="True"/>
+      <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+  </Window.Styles>
+    
+  <Grid ShowGridLines="False" ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*,*,*">
+    
+    <TextBox Text="{Binding InputText}" Grid.Row="0" Grid.RowSpan="6" Classes="GeneralPropertiesText"/>
+    
+    <TextBox Text="{Binding OutputText}" Focusable="False" Grid.Row="0" Grid.RowSpan="6" Grid.Column="1" Classes="GeneralPropertiesText"/>
+  
+    <Button Name="OpenFileDialog" Content="Open File" Grid.Row="6" Grid.Column="0" Classes="AppButtons"/>
+    
+    <Button Name="SaveFileDialog" Content="Save File" Grid.Row="6" Grid.Column="1" Classes="AppButtons"/>
+  
+    <Button Name="openSetRegexDialog" Content="Set Regex" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Classes="AppButtons"/>
+  
+  </Grid>
+
+</Window>
